@@ -136,48 +136,10 @@ To evaluate multiple files:
 python src/aws_lex_program_synthesis_calendar/benchmark_cli.py data/benchmark/tiny_samples/*.md
 ```
 
-## Third-party Libraries
-
-The dependencies used in this project and corresponding licences are listed in the following table.
-
-| Package            |                Licence |
-| :----------------- | ---------------------: |
-| matplotlib         |                    PSF |
-| torch              |                  BSD-3 |
-| lark-parser        |                    MIT |
-| requests           |             Apache 2.0 |
-| cached-property    |                    BSD |
-| typer              |                    MIT |
-| jsons              |                    MIT |
-| more_itertools     |                    MIT |
-| transformers       |                 Apache |
-| httpx              |                    BSD |
-| datasets           |             Apache 2.0 |
-| sm-dataflow        |                    MIT |
-| blobfile           |          Public Domain |
-| sentencepiece      |                 Apache |
-| openfst-python     |                    MIT |
-| Whoosh             | Two-clause BSD license |
-| rapidfuzz          |                    MIT |
-| protobuf           |   3-Clause BSD License |
-| sqlalchemy         |                    MIT |
-| ply                |                    BSD |
-| graphviz           |                    MIT |
-| uvicorn            |                    BSD |
-| fastapi            |                    MIT |
-| termcolor          |                    MIT |
-| pydantic           |                    MIT |
-| appdirs            |                    MIT |
-| Vue                |                    MIT |
-| pytz               |                    MIT |
-| vue-beautiful-chat |                    MIT |
-| vue-cal            |                    MIT |
-
-
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
 ## License
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+This library is licensed under the Apache 2.0 License. See the LICENSE file.
