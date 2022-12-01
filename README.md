@@ -1,11 +1,18 @@
 # DFEE: Interactive DataFlow Execution and Evaluation Kit
 
-We explore program synthesis and execution for task-oriented dialogues in the context of personal time management (e.g., meeting scheduling). It aims to model goal-oriented tasks via interactive programing that is automatically constructed and directly executable on a client’s backend (e.g., personal calendar databases).
+This repository provides the code and sample data for our paper "DFEE: Interactive DataFlow Execution and Evaluation Kit" (AAAI 2023 Demo Paper). Please cite the paper if you find the paper and code useful for your work.
 
-This package aims to provide:
+```bibtex
+@inproceedings{he2023efee
+title={DFEE: Interactive DataFlow Execution and Evaluation Kit},
+author={He, Han and Feng, Song and Bonadiman, Daniele and Zhang, Yi and Mansour, Saab},
+booktitle={AAAI},
+year={2023}
+}
+```
+<img src="arch.png" width=60%>
 
-1. A demonstration system that interacts with users using natural language and presents their calendars in real time.
-2. A benchmark system that evaluates execution accuracy given expressions and the backend calendar.
+
 
 ## Installation
 
@@ -15,21 +22,14 @@ Run the following commands under the root folder of this project:
 python3.7 -m venv venv
 source  venv/bin/activate
 pip install -e . --extra-index-url=https://smpypi.z5.web.core.windows.net/
-
 ```
 
-- `--extra-index-url` is required to install `openfst-python` distributed by Microsoft.
+### Requirements
+The following two opensource libraries are needed for running the code. Please follow the instruction below to clone the repository and apply the provided patch.
 
-Two modified opensource libraries are embedded. To download them 1. git clone the repository 2. git apply the provided patch:
+#### Open Pythonic Dataflow Dialogue Framework (OpenDF)
 
-### Open Pythonic Dataflow Dialogue Framework
-
-This is a modified version of [telepathylabsai](https://github.com/telepathylabsai)/**[OpenDF](https://github.com/telepathylabsai/OpenDF)**, licensed under [MIT license](https://github.com/telepathylabsai/OpenDF/blob/main/LICENSE).
-
-Modifications:
-
-- Implemented 90 missing APIs in SMCalFlow.
-- Many bug fixes.
+See more about the [repo](https://github.com/telepathylabsai) ([MIT license](https://github.com/telepathylabsai/OpenDF/blob/main/LICENSE).). Most modifications are about API implementations. 
 
 ```bash
 git clone https://github.com/telepathylabsai/OpenDF.git
@@ -39,14 +39,11 @@ mv opendf ../src/.
 cd ..
 ```
 
-### Semantic Parsing with Constrained Language Models
 
-This is a modified version of [microsoft](https://github.com/microsoft)/**[semantic_parsing_with_constrained_lm](https://github.com/microsoft/semantic_parsing_with_constrained_lm)**, [MIT license](https://github.com/microsoft/semantic_parsing_with_constrained_lm/blob/main/LICENSE).
+#### Semantic Parsing with Constrained Language Models
 
-Modifications:
-
-- Implemented `semantic_parsing_with_constrained_lm.finetune.platypus`, see https://github.com/microsoft/semantic_parsing_with_constrained_lm/issues/13
-- Supported SMCalFlow V1 and Simplified syntax.
+See more details in the [repo](https://github.com/microsoft/semantic_parsing_with_constrained_lm) ( [MIT license](https://github.com/microsoft/semantic_parsing_with_constrained_lm/blob/main/LICENSE)) .
+Most modifications are related to [issue 13](https://github.com/microsoft/semantic_parsing_with_constrained_lm/issues/13) and supporting V1.
 
 ```bash
 git clone https://github.com/microsoft/semantic_parsing_with_constrained_lm.git
@@ -56,8 +53,11 @@ mv semantic_parsing_with_constrained_lm ../src/.
 cd ..
 ```
 
-- This codebase has been tested on `Deep Learning AMI GPU PyTorch 1.11.0 (Amazon Linux 2) 20220526` and MacOS with Python 3.7. 
-- Other OS or Python versions (shipped with Conda) have not been tested and might not work properly.
+This codebase has been tested on `Deep Learning AMI GPU PyTorch 1.11.0 (Amazon Linux 2) 20220526` and MacOS with Python 3.7. 
+Other OS or Python versions (shipped with Conda) have not been tested and might not work properly.
+
+
+## GUI
 
 To deploy the GUI, you need to install `nginx` and `npm` then:
 
@@ -88,7 +88,7 @@ python src/aws_lex_program_synthesis_calendar/parser_server.py
 
 We provide both CLI and GUI for demonstration.
 
-### CLI
+#### CLI
 
 Run the following command to start a calendar bot in your terminal:
 
@@ -96,7 +96,7 @@ Run the following command to start a calendar bot in your terminal:
 python src/aws_lex_program_synthesis_calendar/bot_cli.py
 ```
 
-### GUI
+#### GUI
 
 Run the following command to start a calendar bot on the web:
 
