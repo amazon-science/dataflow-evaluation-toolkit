@@ -47,7 +47,7 @@ setup(
         "jsons==0.10.1",
         "more_itertools==8.2.0",
         "transformers==4.5.0",
-        "httpx==0.16.1",
+        "httpx==0.23.0",
         "datasets==1.1.3",
         'sm-dataflow @ git+https://github.com/microsoft/task_oriented_dialogue_as_dataflow_synthesis.git@5012802f7db5b31a908927c510a1288cef659f06',
         "blobfile==1.2.5",
