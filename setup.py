@@ -39,7 +39,7 @@ setup(
     include_package_data=True,
     install_requires=[
         "matplotlib==3.1.0",
-        "torch==1.13.1",
+        "torch==2.2.0",
         "lark-parser==0.8.2",
         "requests==2.32.2",
         "cached-property==1.5.1",
