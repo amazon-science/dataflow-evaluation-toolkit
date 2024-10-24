@@ -55,7 +55,7 @@ setup(
         "openfst-python==1.8.2",
         "Whoosh==2.7.4",
         "rapidfuzz==2.0.11",
-        "protobuf==3.19.0",
+        "protobuf==3.19.5",
         "sqlalchemy==1.4.36",
         "ply==3.11",
         "graphviz==0.20",
