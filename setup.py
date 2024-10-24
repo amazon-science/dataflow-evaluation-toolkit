@@ -41,7 +41,7 @@ setup(
         "matplotlib==3.1.0",
         "torch==1.6.0",
         "lark-parser==0.8.2",
-        "requests==2.28.1",
+        "requests==2.32.2",
         "cached-property==1.5.1",
         "typer==0.3.0",
         "jsons==0.10.1",
