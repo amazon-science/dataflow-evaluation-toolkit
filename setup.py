@@ -62,7 +62,7 @@ setup(
         "uvicorn==0.18.3",
         "fastapi==0.81.0",
         "termcolor==1.1.0",
-        "pydantic==1.8.2",
+        "pydantic==1.10.13",
         "appdirs==1.4.4",
         "pytz==2022.2.1"
     ]
